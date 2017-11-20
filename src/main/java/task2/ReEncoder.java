@@ -18,10 +18,9 @@ public class ReEncoder {
         }catch (IOException e){
             IOExcHandler(e);
         }
-        try(OutputStreamWriter outS =
-                            new OutputStreamWriter(
-                                    new FileOutputStream("src/main/resources/task2/out_utf16"),
-                                    "UTF-16")){
+        try(OutputStreamWriter outS = new OutputStreamWriter(
+                                        new FileOutputStream("src/main/resources/task2/out_utf16"),
+                                         "UTF-16")){
             outS.write(content, 0, countOfSymb);
         }catch (FileNotFoundException e){
             FileNotFndExcHandler(e);
@@ -32,7 +31,7 @@ public class ReEncoder {
 
 
     public static void IOExcHandler(IOException ex){
-        System.out.println("Input\\Output error!");
+        System.out.println("Input\Output error!");
         throw new RuntimeException(ex);
     }
 
